@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit</title>
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/home.css"  /> -->
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #9ff;
+            text-align: center;
+            margin: 0 auto;
+            width: 70%;
+        }
+        form {
+            background-color: #6cc;
+            border: 2px solid #aaa;
+            border-radius: 20px;
+            box-shadow: 0px 0px 3px 3px #aaa;
+            padding: 20px;
+            
+        }
+        .h {
+            border: 2px solid #aaa;
+            border-radius: 20px;
+            box-shadow: 0px 0px 3px 3px #aaa;
+            background-color:#8aa;
+        }
+        input[type="text"],
+        input[type="email"] {
+            margin-bottom: 20px;
+        }
+        input {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        #female {
+            margin-bottom: 20px;
+        }
+        #country {
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 class="h">Registration Form</h1>
+
+    <form>
+        <label for="first_name">First name</label>
+        <input 
+        type="text" 
+        name="first_name" 
+        placeholder="First name"
+        id="first_name"/>
+        <br />
+
+        <label for="last_name">Last name</label>
+        <input 
+        type="text" 
+        name="last_name" 
+        placeholder="Last name"
+        id="last_name"/>
+        <br /> 
+        <label for="email">E-mail</label>
+        <input 
+        type="email"
+        name="email"
+        placeholder="email"
+        id="email"/>
+        <br />
+
+        <label for="gender">Gender</label>
+        <br />
+        
+        <input 
+        type="radio"
+        name="gender"
+        id="male"
+        value="male"/>
+        <label for="male">Male</label>
+
+        <input 
+        type="radio"
+        name="gender"
+        id="female"
+        value="female"/>
+        <label for="female">Female</label>
+        <br />
+
+        <label for="country">Country</label>
+        <select 
+        name="country" 
+        id="country">
+            <option>select an option</option>
+            <option value="usa">USA</option>
+            <option value="fr">France</option>
+            <option value="cmr">Cameroon</option>
+            <option value="grm">Germany</option>
+        </select>
+
+    <br />
+    <input 
+    type="submit"
+    value="Submit">
+    
+    </form>
+
+</body>
+</html>
