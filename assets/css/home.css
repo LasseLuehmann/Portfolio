@@ -1,4 +1,14 @@
 /* External CSS */
+body {
+    background-color: #9ff;
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #dci {
     text-decoration: none;
 }
