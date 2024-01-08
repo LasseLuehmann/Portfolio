@@ -34,3 +34,8 @@ body {
     box-shadow: 0px 0px 3px 3px #aaa;
     background-color:#8aa;
 }
+#LuR {
+    border: 2px solid #aaa;
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px 3px #aaa;
+}
