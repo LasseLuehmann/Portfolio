@@ -58,7 +58,7 @@
             border: 2px solid #aaa;
             border-radius: 20px;
             padding: 5px;
-            background-color:#915;
+            background-color:#688;
             width: 200px;
             margin-left: 38%;
         }
@@ -66,20 +66,22 @@
             border: 2px solid #aaa;
             border-radius: 20px;
             padding: 5px;
-            background-color:#591;
+            background-color:#688;
             width: 200px;
-            margin-left: 20%;
+            /* margin-left: 20%; */
         }
         #message-sub {
             border: 2px solid #aaa;
             border-radius: 20px;
             padding: 5px;
-            background-color:#159;
+            background-color:#688;
             width: 200px;
-            margin-left: 10%;
+            /* margin-left: 10%; */
         }
         #g-c_m-s {
-            display:flex
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
         }
     </style>
 </head>
@@ -90,7 +92,7 @@
         <a href="https://lasseluehmann.github.io/Portfolio/">HOME</a>
     </nav>
 
-    <form>
+    <form name="registration" onsubmit="return validation()">
         <div id="name-email">
             <label for="first_name">First name</label>
             <input 
@@ -163,6 +165,7 @@
     
     </form>
 
+    <script type="text/javascript" src="/assets/js/form.js"></script>
 </body>
 </html>
 
