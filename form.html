@@ -56,7 +56,7 @@
         }
 
         textarea {
-            width: 60%;
+            width: 45%;
             animation-name: text-area;
             animation-duration: 4s;
             transition: background-color 1s;
@@ -66,7 +66,7 @@
                 width:5%;
             }
             to {
-                width: 60%;
+                width: 45%;
             }
         }
 
@@ -107,6 +107,12 @@
             margin-bottom: 20px;
         }
 
+        .submit-disabled {
+            cursor: not-allowed;
+            pointer-events: none;
+            background-image: linear-gradient(to right, #fda, #fed);
+        }
+
         input[type="submit"] {
             background-image: linear-gradient(to right, #089, #5df);
             border: none;
@@ -125,6 +131,18 @@
             background-color:#8aa;
             box-shadow: 0px 0px 3px 3px #aaa;
             color: #000;
+            transition: 1s;
+        }
+
+        nav a:hover {
+            font-size: x-large;
+            padding: 5px 2px;
+        }
+
+        nav:hover {
+            animation: rotate;
+            animation-duration: 0.2s;
+            animation-fill-mode: forwards;
         }
 
         #name-email {
@@ -169,6 +187,11 @@
             animation-fill-mode: forwards;
         }
 
+        #text-count {
+            color: #900;
+            margin-left: 55%;
+        }
+
     </style>
 </head>
 <body>
@@ -185,6 +208,7 @@
                 type="text" 
                 name="first_name" 
                 placeholder="First name"
+                onkeyup="activateSubmit()"
                 id="first_name"/><br />
 
             <label for="last_name">Last name</label>
@@ -192,6 +216,7 @@
                 type="text" 
                 name="last_name" 
                 placeholder="Last name"
+                onkeyup="activateSubmit()"
                 id="last_name"/><br />
 
             <label for="email">E-mail</label>
@@ -199,6 +224,7 @@
                 type="email"
                 name="email"
                 placeholder="email"
+                onkeyup="activateSubmit()"
                 id="email"/><br />
         </div>
         <div id="g-c_m-s">
@@ -236,8 +262,10 @@
             <textarea 
                     name="message" 
                     id="message"
-                    rows="10" 
+                    rows="10"
+                    onkeyup="countText()" 
                 ></textarea><br />
+                <p id="text-count">0/100</p>
 
             <input 
                 type="checkbox"
@@ -247,8 +275,10 @@
         </div>
         </div>
         <input 
+            class="submit-disabled"
+            id="submit"
             type="submit"
-            value="Submit">
+            value="Submit"/>
     
     </form>
 
